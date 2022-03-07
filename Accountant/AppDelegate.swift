@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Purchases.configure(withAPIKey: Constants.APIKey.revenueCat)
         
         //MARK:GOOGLE ADD initializing
-//        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        //        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         //MARK: Loading exchange rates
         if UserProfile.isAppLaunchedBefore() {
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: - GET PURCHASER INFO
         if let lastAccessCheckDate = UserProfile.getLastAccessCheckDate(),
            let secureDate = calendar.date(byAdding: .hour, value: 6, to: lastAccessCheckDate),
-               secureDate > Date() {
+           secureDate > Date() {
             Purchases.shared.purchaserInfo { (purchaserInfo, error) in
                 if purchaserInfo?.entitlements.all["pro"]?.isActive == false,
                    let expirationDate = purchaserInfo?.expirationDate(forEntitlement: "pro"),
