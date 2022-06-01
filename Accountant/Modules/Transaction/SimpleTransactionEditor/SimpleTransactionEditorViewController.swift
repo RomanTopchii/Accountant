@@ -448,6 +448,7 @@ extension SimpleTransactionEditorViewController {
         let accountNavVC = AccountNavigationViewController()
         accountNavVC.parentAccount = account
         accountNavVC.requestor = self
+        accountNavVC.delegate = self
         accountNavVC.showHiddenAccounts = false
         accountNavVC.searchBarIsHidden = false
         mainView.doneButtonAction()

@@ -114,7 +114,7 @@ enum Schema {
         case createdByUser
         case modifyDate
         case modifiedByUser
-        case applied
+        case status
         case comment
         case date
         // Relationships

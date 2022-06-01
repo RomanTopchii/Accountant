@@ -334,7 +334,7 @@ final class Transaction: BaseEntity {
     static func exportTransactionsToString(context: NSManagedObjectContext) -> String {
         let fetchRequest = fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: Schema.Transaction.date.rawValue, ascending: false)]
-        fetchRequest.predicate = NSPredicate(format: "\(Schema.Transaction.applied.rawValue) = true")
+        fetchRequest.predicate = NSPredicate(format: "\(Schema.Transaction.status.rawValue) = \(Status.applied.rawValue) || \(Schema.Transaction.status.rawValue) = \(Status.approved.rawValue)")
         do {
             let storedTransactions = try context.fetch(fetchRequest)
             var export: String = "Id,Date,Type,Account,Amount,Comment"
