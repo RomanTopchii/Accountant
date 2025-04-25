@@ -57,13 +57,7 @@ class AccountEditorInteractor: AccountEditorInteractorInput {
     }
 
     @objc private func reloadProAccessData() {
-//        Purchases.shared.purchaserInfo { (purchaserInfo, _) in
-//            if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
-//                self.isUserHasPaidAccess = true
-//            } else if purchaserInfo?.entitlements.all["pro"]?.isActive == false {
-//                self.isUserHasPaidAccess = false
-//            }
-//        }
+        AccessManager.hasProAccess { hasAccess in self.isUserHasPaidAccess = hasAccess }
     }
 
     func provideData() {

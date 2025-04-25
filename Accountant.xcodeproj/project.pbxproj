@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -209,7 +209,6 @@
 		2BB780B0272D71D3002D2098 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB780AF272D71D3002D2098 /* InstructionViewController.swift */; };
 		2BB780B2272EAB9B002D2098 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB780B1272EAB9B002D2098 /* GuideView.swift */; };
 		2BC058BD26CDB63E00FE896C /* TransactionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC058BC26CDB63E00FE896C /* TransactionItemCell.swift */; };
-		2BCC0BDA26ACD79C00E8680E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCC0BD926ACD79C00E8680E /* StoreKit.framework */; };
 		2BCE69F22B406F370086B773 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BCE69F12B406F360086B773 /* GoogleService-Info.plist */; };
 		2BCE69F42B4091980086B773 /* RemoteConfigValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCE69F32B4091980086B773 /* RemoteConfigValues.swift */; };
 		2BCFAA852B13434E008E9BE5 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFAA842B13434E008E9BE5 /* WelcomeViewModel.swift */; };
@@ -510,7 +509,6 @@
 		2BB780AF272D71D3002D2098 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		2BB780B1272EAB9B002D2098 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		2BC058BC26CDB63E00FE896C /* TransactionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemCell.swift; sourceTree = "<group>"; };
-		2BCC0BD926ACD79C00E8680E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2BCE69F12B406F360086B773 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BCE69F32B4091980086B773 /* RemoteConfigValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigValues.swift; sourceTree = "<group>"; };
 		2BCFAA842B13434E008E9BE5 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
@@ -549,7 +547,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38318A9FD81C28716622F93F /* Pods_Accountant.framework in Frameworks */,
-				2BCC0BDA26ACD79C00E8680E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1358,7 +1355,6 @@
 		77D38D658A3E56B26B79298B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2BCC0BD926ACD79C00E8680E /* StoreKit.framework */,
 				97FD10DCF67B198D7BE0F270 /* Pods_Accountant.framework */,
 			);
 			name = Frameworks;

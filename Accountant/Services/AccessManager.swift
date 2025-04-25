@@ -6,45 +6,37 @@
 //
 
 import Foundation
+import Purchases
 
 class AccessManager {
     static func canCreateSubAccountFor(account: Account?, isUserHasPaidAccess: Bool, environment: Environment) -> Bool {
-        print(environment)
-        if environment == .test ||
-            (environment == .prod && (isUserHasPaidAccess || (isUserHasPaidAccess == false
-                                                              && account?.directChildrenList.count ?? 15 < 15
-                                                              && (account == nil || account?.level == 0
-                                                                  || account?.level == 1)))) {
-            return true
-        }
-        return false
+       return true
     }
 
     static func canHideAccount(environment: Environment, isUserHasPaidAccess: Bool) -> Bool {
-        if environment == .test || isUserHasPaidAccess == true {
-            return true
-        }
-        return false
+        return true
     }
 
     static func canSwitchingAppToMultiItemMode(environment: Environment, isUserHasPaidAccess: Bool) -> Bool {
-        if environment == .test || isUserHasPaidAccess == true {
-            return true
-        }
-        return false
+        return true
     }
 
     static func canCreateAccountInNonAccountingCurrency(environment: Environment, isUserHasPaidAccess: Bool) -> Bool {
-        if environment == .test || isUserHasPaidAccess == true {
-            return true
-        }
-        return false
+        return true
     }
 
     static func canImportExportEntities(environment: Environment, isUserHasPaidAccess: Bool) -> Bool {
-        if environment == .test || isUserHasPaidAccess == true {
-            return true
-        }
-        return false
+        return true
+    }
+    
+    static func hasProAccess(completion: @escaping (_: Bool) -> Void) {
+        completion(true)
+//        Purchases.shared.purchaserInfo { (purchaserInfo, _) in
+//            if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
+//                completion(true)
+//            } else if purchaserInfo?.entitlements.all["pro"]?.isActive == false {
+//                completion(false)
+//            }
+//        }
     }
 }

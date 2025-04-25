@@ -100,7 +100,7 @@ class TransactionListWorker: NSObject {
         let context = persistentContainer.newBackgroundContext()
         let archivingDate = ArchivingWorker.getCurrentArchivedPeriod(context: mainContext)
 
-        if archivingDate != nil && archivingDate! < object.date {
+        if archivingDate != nil && archivingDate! > object.date {
             delegate?.showError(error: WorkerError.cannotDeleteInClosedPeriod)
         }
 

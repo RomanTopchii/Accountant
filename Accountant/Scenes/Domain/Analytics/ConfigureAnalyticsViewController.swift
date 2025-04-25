@@ -355,6 +355,6 @@ class ConfigureAnalyticsViewController: UIViewController { // swiftlint:disable:
     }
 
     @objc private func reloadProAccessData() {
-      
+        AccessManager.hasProAccess { hasAccess in self.isUserHasPaidAccess = hasAccess }
     }
 }
